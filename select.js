@@ -16,6 +16,14 @@ $(".tabs ul li").click(function() {
     $(this).find('li').addClass('active');
 });
 
+$(".projects_list ul li").click(function() {
+    $('body').css('overflow-y', 'hidden');
+})
+
+$(".popup close").click(function() {
+    $('body').css('overflow-y', 'hidden');
+})
+
 if($) {
 
     $('#container > *').hide(0);
