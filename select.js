@@ -20,8 +20,8 @@ $(".projects_list ul li").click(function() {
     $('body').css('overflow-y', 'hidden');
 })
 
-$(".popup close").click(function() {
-      $('body').css('overflow-y', 'hidden');
+$(".popup .close").click(function() {
+    $('body').css('overflow-y', 'scroll');
 })
 
 if($) {
