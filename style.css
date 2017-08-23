@@ -332,6 +332,7 @@ h1 {
 }
 
 .overlay {
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -342,7 +343,7 @@ h1 {
   visibility: hidden;
   opacity: 0;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   align-content: center;
   position: fixed;
@@ -354,10 +355,12 @@ h1 {
 }
 
 .popup {
+  margin-top: 30px;
+  margin-bottom: 30px;
   background: #fff;
   border-radius: 5px;
-  width: 964px;
-  height: 619px;
+  width: 1024px;
+  height: 1078px;
   position: relative;
   transition: all 1s cubic-bezier(0.4, 0, 1, 1);
   display: block;
@@ -404,10 +407,11 @@ h1 {
 }
 
 .popup .content .image {
-  background-size: cover;
-  margin-top: 55px;
-  width: 690px;
-  height: 414px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 56px;
+  width: 1024px;
+  height: 697px;
   position: absolute;
 }
 
@@ -418,7 +422,7 @@ h1 {
   background-image: url("images/fullsize.png");
   float: right;
   margin-right: 10px;
-  margin-top: 371px;
+  margin-top: 655px;
 }
 
 .popup .content .info {
@@ -431,25 +435,24 @@ h1 {
 }
 
 .popup .content .vertical_line {
-  border-right: 1px solid #E1E1E1;
-  height: 413px;
-  margin-top: 55px;
-  margin-left: 690px;
+  border-bottom: 1px solid #E1E1E1;
+  width: 100%;
+  top: 753px;
   position: absolute;
 }
 
 .popup .content .line_bottom {
   position: absolute;
-  margin-top: 468px;
+  margin-top: 891px;
   width: 100%;
   border-top: 1px solid #E1E1E1;
 }
 
 .popup .content .text {
   position: absolute;
-  width: 246px;
-  margin-left: 707px;
-  margin-top: 69px;
+  width: 1000px;
+  margin-left: 18px;
+  margin-top: 772px;
 }
 
 .popup .content .info .title {
@@ -468,7 +471,7 @@ h1 {
 }
 
 .popup .content .carousel {
-  margin-top: 484px;
+  margin-top: 921px;
   display: flex;
 }
 
@@ -491,9 +494,9 @@ h1 {
 }
 
 .popup .content .carousel .preview-wrap {
-  height: 119px;
+  height: 125px;
   position: relative;
-  width: 873px;
+  width: 897px;
   margin: auto;
   overflow: hidden;
 }
@@ -513,12 +516,12 @@ h1 {
 }
 
 .popup .content .carousel li:not(:first-child) {
-  margin-left: 16px;
+  margin-left: 21px;
 }
 
 .popup .content .carousel ul li .preview {
-  width: 206px;
-  height: 117px;
+  width: 215px;
+  height: 124px;
   border: solid #e1e1e1 1px;
   border-radius: 4px;
 }

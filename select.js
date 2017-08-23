@@ -21,7 +21,7 @@ $(".projects_list ul li").click(function() {
 })
 
 $(".popup close").click(function() {
-    $('body').css('overflow-y', 'hidden');
+      $('body').css('overflow-y', 'hidden');
 })
 
 if($) {
