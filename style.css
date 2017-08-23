@@ -360,7 +360,7 @@ h1 {
   background: #fff;
   border-radius: 5px;
   width: 1024px;
-  height: 1078px;
+  height: 918px;
   position: relative;
   transition: all 1s cubic-bezier(0.4, 0, 1, 1);
   display: block;
@@ -410,7 +410,7 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 56px;
-  width: 1024px;
+  width: 100%;
   height: 697px;
   position: absolute;
 }
@@ -450,7 +450,7 @@ h1 {
 
 .popup .content .text {
   position: absolute;
-  width: 1000px;
+  width: 95%;
   margin-left: 18px;
   margin-top: 772px;
 }
@@ -475,22 +475,29 @@ h1 {
   display: flex;
 }
 
-.popup .content .carousel .left_arrow {
+.left_arrow {
   background-image: url("images/left_arrow.png");
   background-repeat: no-repeat;
-  height: 33px;
-  width: 20px;
-  margin-top: 43px;
-  margin-left: 12px;
+  background-size: contain;
+  height: 64px;
+  width: 38px;
+  margin: auto;
+  opacity: 0.6;
 }
 
-.popup .content .carousel .right_arrow {
+.right_arrow {
   background-image: url("images/right_arrow.png");
   background-repeat: no-repeat;
-  height: 33px;
-  width: 20px;
-  margin-top: 43px;
-  margin-right: 12px;
+  height: 64px;
+  background-size: contain;
+  width: 38px;
+  margin: auto;
+  opacity: 0.6;
+}
+
+.left_arrow:hover, .right_arrow:hover {
+  opacity: 1.0;
+  transition: 0.3s ease;
 }
 
 .popup .content .carousel .preview-wrap {
