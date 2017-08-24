@@ -400,7 +400,7 @@ h1 {
 }
 
 .popup .content .line_top {
-  position: absolute;
+  /* position: absolute; */
   margin-top: 55px;
   width: 100%;
   border-top: 1px solid #E1E1E1;
@@ -409,10 +409,6 @@ h1 {
 .popup .content .image {
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 56px;
-  width: 100%;
-  height: 697px;
-  position: absolute;
 }
 
 .popup .content .image .preview_icon {
@@ -428,6 +424,7 @@ h1 {
 .popup .content .info {
   transition: opacity 1s;
   opacity: 0.0;
+  position: absolute;
 }
 
 .popup .content .info.active {
@@ -438,21 +435,19 @@ h1 {
   border-bottom: 1px solid #E1E1E1;
   width: 100%;
   top: 753px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .popup .content .line_bottom {
-  position: absolute;
   margin-top: 891px;
   width: 100%;
   border-top: 1px solid #E1E1E1;
 }
 
 .popup .content .text {
-  position: absolute;
   width: 95%;
   margin-left: 18px;
-  margin-top: 772px;
+  margin-top: 18px;
 }
 
 .popup .content .info .title {
@@ -531,4 +526,10 @@ h1 {
   height: 124px;
   border: solid #e1e1e1 1px;
   border-radius: 4px;
+}
+
+.picture {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
 }
