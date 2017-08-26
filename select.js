@@ -41,7 +41,7 @@ if($) {
 
 $(function() {
   var page = 0;
-  count = $(".content .info").length - 1;
+  count = $(".popup .info").length - 1;
   console.log(count);
 
   $(".left_arrow").click(function() {
@@ -53,8 +53,14 @@ $(function() {
         page--
       }
 
-      $(".content").find(".info").removeClass("active");
-      $(".content").find(".info[data-info-id=" + page + "]").addClass("active");
+      var active = $(".info.active");
+
+      height = active.height();
+      console.log(height);
+      $(".content").css("height", height + 55);
+
+      $(".popup").find(".info").removeClass("active");
+      $(".popup").find(".info[data-info-id=" + page + "]").addClass("active");
       console.log(page);
   })
 
@@ -64,9 +70,16 @@ $(function() {
       } else {
         page++
       }
+
+      var active = $(".info.active");
+
+      height = active.height();
+      console.log(height);
+      $(".content").css("height", height + 55);
+
       console.log("right");
-      $(".content").find(".info").removeClass("active");
-      $(".content").find(".info[data-info-id=" + page + "]").addClass("active");
+      $(".popup").find(".info").removeClass("active");
+      $(".popup").find(".info[data-info-id=" + page + "]").addClass("active");
       console.log(page);
   })
 })

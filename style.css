@@ -387,6 +387,8 @@ h1 {
 
 .popup .content {
   overflow: auto;
+  background: #fff;
+  border-radius: 5px;
 }
 
 .popup .content .name {
