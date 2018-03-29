@@ -27,12 +27,15 @@
   font-family: Lato-Semibold;
 }
 
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 @media (min-width: 1024px) {
 
   body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
     font-family: "Avenir";
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -198,16 +201,17 @@
     margin: auto;
     margin-top: 54px;
     color: #a0a0a0;
-    width: 995px;
+    width: 953px;
     margin-bottom: 20px;
   }
 
   #container #interfaces .description .images .web .web_image {
-    background-image: url("images/web.png");
+    background-image: url("images/web.svg");
     height: 141px;
     width: 180px;
     background-repeat: no-repeat;
     margin: auto;
+    background-size: contain;
   }
 
   #container #interfaces .description .images .web .web_text {
@@ -220,12 +224,13 @@
   }
 
   #container #interfaces .description .images .mobile .mobile_image {
-    background-image: url("images/mobile.png");
+    background-image: url("images/phone.svg");
     height: 152px;
     width: 165px;
     background-repeat: no-repeat;
     margin: auto;
     margin-top: -10px;
+    background-size: contain;
   }
 
   #container #interfaces .description .images .mobile .mobile_text {
@@ -235,11 +240,11 @@
   #container #interfaces .description .images .mobile {
     float: left;
     width: 291px;
-    margin-left: 76px;
+    margin-left: 55px;
   }
 
   #container #interfaces .description .images .desktop .desktop_image {
-    background-image: url("images/desktop.png");
+    background-image: url("images/mac.svg");
     height: 143px;
     width: 180px;
     background-size: contain;
@@ -254,7 +259,7 @@
   #container #interfaces .description .images .desktop {
     float: left;
     width: 275px;
-    margin-left: 76px;
+    margin-left: 55px;
   }
 
   #container #interfaces .projects {
@@ -328,7 +333,7 @@
   }
 
   #container #interfaces .projects .projects_list .panel .title {
-    font-size: 20px;
+    font-size: 21px;
     color: #707070;
     letter-spacing: -0.4px;
     text-align: left;
@@ -337,7 +342,7 @@
   }
 
   #container #interfaces .projects .projects_list .panel .description {
-    font-size: 17px;
+    font-size: 15px;
     color: #A2A2A2;
     letter-spacing: -0.34px;
     text-align: left;
@@ -544,11 +549,12 @@
   }
 
   #container #interfaces .description .images .web .web_image {
-    background-image: url("images/web.png");
+    background-image: url("images/web.svg");
     height: 141px;
     width: 179px;
     background-repeat: no-repeat;
     margin: auto;
+    background-size: contain;
   }
 
   #container #interfaces .description .images .web .web_text {
@@ -557,15 +563,17 @@
 
   #container #interfaces .description .images .web {
     float: left;
+    background-size: contain;
     width: 277px;
   }
 
   #container #interfaces .description .images .mobile .mobile_image {
-    background-image: url("images/mobile.png");
+    background-image: url("images/phone.svg");
     height: 152px;
     width: 165px;
     background-repeat: no-repeat;
     margin: auto;
+    background-size: contain;
     margin-top: -10px;
   }
 
@@ -580,7 +588,7 @@
   }
 
   #container #interfaces .description .images .desktop .desktop_image {
-    background-image: url("images/desktop.png");
+    background-image: url("images/mac.svg");
     height: 143px;
     width: 180px;
     background-size: contain;
@@ -678,6 +686,1056 @@
 
   #container #interfaces .projects .projects_list .panel .description {
     font-size: 17px;
+    color: #A2A2A2;
+    letter-spacing: -0.34px;
+    text-align: left;
+    width: 520px;
+    margin-top: 4px;
+    margin-left: 15px;
+  }
+
+  .overlay {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms ease-out;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  body {
+    font-family: "Avenir";
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .background_image {
+    position: relative;
+    background-image: url("images/sonya5.png");
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-position: 20% 80%;
+    background-repeat: no-repeat;
+  }
+
+  .links {
+    position: absolute;
+    right: 15px;
+    font-weight: 500;
+    top: 9px;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .links .gmail {
+    margin-right: 23px;
+  }
+
+  .links .gmail::before {
+    position: relative;
+    content: url("images/gmail.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .links .telegram {
+    margin-right: 23px;
+  }
+
+  .links .telegram::before {
+    position: relative;
+    content: url("images/telegram.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .links .github::before {
+    position: relative;
+    content: url("images/github.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  h1 {
+    position: absolute;
+    font-family: "Lato-Semibold";
+    color: white;
+    font-weight: normal;
+    font-size: 42px;
+    left: 22px;
+    top: 18px;
+    margin: 0;
+    letter-spacing: -0.1px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+  }
+
+  .tabs {
+    height: 58px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.17);
+  }
+
+  .tabs ul {
+    width: 630px;
+    font-size: 0;
+    user-select: none;
+    margin: auto;
+    padding: 0;
+  }
+
+  .tabs ul li {
+    display: inline-block;
+    width: 210px;
+    height: 58px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    color: rgba(61, 61, 61, 0.5);
+    position: relative;
+    cursor: pointer;
+    letter-spacing: -0.48px;
+  }
+
+  .tabs .active {
+    display: inline-block;
+    color: rgb(82, 82, 82);
+    cursor: pointer;
+  }
+
+  .tabs .slider {
+    display: block;
+    bottom: 0;
+    top: -3px;
+    height: 4px;
+    width: 158px;
+    margin-left: 26px;
+    background: #FF9864;
+    transition: all 0.5s;
+  }
+
+
+  .overlay_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #container #interfaces .description {
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #container #interfaces .description .title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #a0a0a0;
+    width: 571px;
+    margin:  auto;
+  }
+
+  #container #interfaces .description p {
+    font-size: 18px;
+    color: #A0A0A0;
+    font-weight: 300;
+    width: 637px;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  #container #interfaces .description .images {
+    position: relative;
+    margin: auto;
+    margin-top: 54px;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    width: 685px;
+  }
+
+  #container #interfaces .description .images .web .web_image {
+    background-image: url("images/web.svg");
+    height: 120px;
+    width: 152px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+
+  #container #interfaces .description .images .web .web_text {
+    font-size: 15px;
+    margin-top: 26px;
+  }
+
+  #container #interfaces .description .images .web {
+    float: left;
+    width: 198px;
+  }
+
+  #container #interfaces .description .images .mobile .mobile_image {
+    background-image: url("images/phone.svg");
+    height: 131px;
+    width: 141px;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: contain;
+    margin-top: -10px;
+  }
+
+  #container #interfaces .description .images .mobile .mobile_text {
+      margin-top: 26px;
+      font-size: 15px;
+  }
+
+  #container #interfaces .description .images .mobile {
+    float: left;
+    width: 221px;
+    margin-left: 20px;
+  }
+
+  #container #interfaces .description .images .desktop .desktop_image {
+    background-image: url("images/mac.svg");
+    height: 121px;
+    width: 153px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+
+  #container #interfaces .description .images .desktop .desktop_text {
+    margin-top: 26px;
+    font-size: 15px;
+  }
+
+  #container #interfaces .description .images .desktop {
+    float: left;
+    width: 226px;
+    margin-left: 20px;
+  }
+
+  #container #interfaces .projects {
+    text-align: center;
+    position: relative;
+    top: 72px;
+    float: left;
+  }
+
+  #container #interfaces .projects .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #A0A0A0;
+    /* letter-spacing: -0.6px; */
+    width: 556px;
+    margin: auto;
+  }
+
+  #container #interfaces .projects p {
+    font-size: 18px;
+    color: #A0A0A0;
+    /* letter-spacing: -0.4px; */
+    font-weight: 300;
+    width: 665px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 34px;
+  }
+
+  #container #interfaces .projects .projects_list {
+    margin: auto;
+    width: 100%;
+  }
+
+  #container #interfaces .projects .projects_list ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    /* width: 1139px; */
+  }
+
+  #container #interfaces .projects .projects_list li {
+    display: block;
+    float: left;
+    margin: auto;
+    list-style-type: none;
+    margin-bottom: 35px;
+    width: 70%;
+  }
+
+  #container #interfaces .projects .projects_list li:nth-child(even) {
+  }
+
+  #container #interfaces .projects .projects_list .image {
+    height: 390px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    border: 1px #d6d6d6 solid;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+  }
+
+  #container #interfaces .projects .projects_list .panel {
+    width: 100%;
+    height: 80px;
+    margin-top: 309px;
+    background-color: white;
+    border-radius: 0px 0px 3px 3px;
+    border-top: 1px #d6d6d6 solid;
+  }
+
+  #container #interfaces .projects .projects_list .panel .title {
+    font-size: 20px;
+    color: #707070;
+    letter-spacing: -0.4px;
+    text-align: left;
+    margin-top: 13px;
+    margin-left: 15px;
+  }
+
+  #container #interfaces .projects .projects_list .panel .description {
+    font-size: 17px;
+    color: #A2A2A2;
+    letter-spacing: -0.34px;
+    text-align: left;
+    width: 520px;
+    margin-top: 4px;
+    margin-left: 15px;
+  }
+
+  .overlay {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms ease-out;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+  body {
+    font-family: "Avenir";
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .background_image {
+    position: relative;
+    background-image: url("images/sonya5.png");
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-position: 20% 80%;
+    background-repeat: no-repeat;
+  }
+
+  .links {
+    position: absolute;
+    right: 15px;
+    font-weight: 500;
+    top: 9px;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .links .gmail {
+    margin-right: 23px;
+  }
+
+  .links .gmail::before {
+    position: relative;
+    content: url("images/gmail.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .links .telegram {
+    margin-right: 23px;
+  }
+
+  .links .telegram::before {
+    position: relative;
+    content: url("images/telegram.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .links .github::before {
+    position: relative;
+    content: url("images/github.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  h1 {
+    position: absolute;
+    font-family: "Lato-Semibold";
+    color: white;
+    font-weight: normal;
+    font-size: 42px;
+    left: 22px;
+    top: 18px;
+    margin: 0;
+    letter-spacing: -0.1px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+  }
+
+  .tabs {
+    height: 58px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.17);
+  }
+
+  .tabs ul {
+    width: 630px;
+    font-size: 0;
+    user-select: none;
+    margin: auto;
+    padding: 0;
+  }
+
+  .tabs ul li {
+    display: inline-block;
+    width: 210px;
+    height: 58px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    color: rgba(61, 61, 61, 0.5);
+    position: relative;
+    cursor: pointer;
+    letter-spacing: -0.48px;
+  }
+
+  .tabs .active {
+    display: inline-block;
+    color: rgb(82, 82, 82);
+    cursor: pointer;
+  }
+
+  .tabs .slider {
+    display: block;
+    bottom: 0;
+    top: -3px;
+    height: 4px;
+    width: 158px;
+    margin-left: 26px;
+    background: #FF9864;
+    transition: all 0.5s;
+  }
+
+
+  .overlay_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #container #interfaces .description {
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #container #interfaces .description .title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #a0a0a0;
+    width: 571px;
+    margin:  auto;
+  }
+
+  #container #interfaces .description p {
+    font-size: 18px;
+    color: #A0A0A0;
+    font-weight: 300;
+    max-width: 637px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  #container #interfaces .description .images {
+    position: relative;
+    margin: auto;
+    margin-top: 54px;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    width: 318px;
+  }
+
+  #container #interfaces .description .images .web .web_image {
+    background-image: url("images/web.svg");
+    height: 193px;
+    width: 242px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+
+  #container #interfaces .description .images .web .web_text {
+    font-size: 18px;
+    width: 318px;
+  }
+
+  #container #interfaces .description .images .web {
+    width: 318px;
+    float: left;
+  }
+
+  #container #interfaces .description .images .mobile .mobile_image {
+    background-image: url("images/phone.svg");
+    height: 209px;
+    width: 226px;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: contain;
+  }
+
+  #container #interfaces .description .images .mobile .mobile_text {
+      margin-top: 26px;
+      width: 318px;
+      font-size: 18px;
+  }
+
+  #container #interfaces .description .images .mobile {
+    float: left;
+    margin: 0;
+    margin-top: 38px;
+    width: 318px;
+  }
+
+  #container #interfaces .description .images .desktop .desktop_image {
+    background-image: url("images/mac.svg");
+    height: 193px;
+    width: 242px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+
+  #container #interfaces .description .images .desktop .desktop_text {
+    margin-top: 26px;
+    font-size: 18px;
+  }
+
+  #container #interfaces .description .images .desktop {
+    float: left;
+    width: 318px;
+    /* margin-left: 10px; */
+    margin-top: 38px;
+  }
+
+  #container #interfaces .projects {
+    text-align: center;
+    position: relative;
+    top: 72px;
+    float: left;
+  }
+
+  #container #interfaces .projects .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #A0A0A0;
+    /* letter-spacing: -0.6px; */
+    width: 556px;
+    margin: auto;
+  }
+
+  #container #interfaces .projects p {
+    font-size: 18px;
+    color: #A0A0A0;
+    /* letter-spacing: -0.4px; */
+    font-weight: 300;
+    width: 665px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 34px;
+  }
+
+  #container #interfaces .projects .projects_list {
+    margin: auto;
+    width: 100%;
+  }
+
+  #container #interfaces .projects .projects_list ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    /* width: 1139px; */
+  }
+
+  #container #interfaces .projects .projects_list li {
+    display: block;
+    float: left;
+    margin: auto;
+    list-style-type: none;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  #container #interfaces .projects .projects_list li:nth-child(even) {
+  }
+
+  #container #interfaces .projects .projects_list .image {
+    height: 390px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    border: 1px #d6d6d6 solid;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+  }
+
+  #container #interfaces .projects .projects_list .panel {
+    width: 100%;
+    height: 80px;
+    margin-top: 309px;
+    background-color: white;
+    border-radius: 0px 0px 3px 3px;
+    border-top: 1px #d6d6d6 solid;
+  }
+
+  #container #interfaces .projects .projects_list .panel .title {
+    font-size: 20px;
+    color: #707070;
+    letter-spacing: -0.4px;
+    text-align: left;
+    margin-top: 13px;
+    margin-left: 15px;
+  }
+
+  #container #interfaces .projects .projects_list .panel .description {
+    font-size: 17px;
+    color: #A2A2A2;
+    letter-spacing: -0.34px;
+    text-align: left;
+    width: 520px;
+    margin-top: 4px;
+    margin-left: 15px;
+  }
+
+  .overlay {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms ease-out;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+
+@media (max-width: 599px) {
+
+  body {
+    font-family: "Avenir";
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .background_image {
+    position: relative;
+    background-image: url("images/sonya5.png");
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-position: 20% 80%;
+    background-repeat: no-repeat;
+  }
+
+  .links {
+    position: absolute;
+    right: 15px;
+    font-weight: 500;
+    top: 9px;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .links .gmail {
+    margin-right: 23px;
+  }
+
+  .links .gmail::before {
+    position: relative;
+    content: url("images/gmail.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .links .telegram {
+    margin-right: 23px;
+  }
+
+  .links .telegram::before {
+    position: relative;
+    content: url("images/telegram.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .links .github::before {
+    position: relative;
+    content: url("images/github.png");
+    width: 24px;
+    height: 24px;
+    right: 9px;
+    top: 5px;
+  }
+
+  h1 {
+    position: absolute;
+    font-family: "Lato-Semibold";
+    color: white;
+    font-weight: normal;
+    font-size: 42px;
+    left: 22px;
+    top: 18px;
+    margin: 0;
+    letter-spacing: -0.1px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+  }
+
+  .tabs {
+    height: 58px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.17);
+  }
+
+  .tabs ul {
+    width: 630px;
+    font-size: 0;
+    user-select: none;
+    margin: auto;
+    padding: 0;
+  }
+
+  .tabs ul li {
+    display: inline-block;
+    width: 210px;
+    height: 58px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    color: rgba(61, 61, 61, 0.5);
+    position: relative;
+    cursor: pointer;
+    letter-spacing: -0.48px;
+  }
+
+  .tabs .active {
+    display: inline-block;
+    color: rgb(82, 82, 82);
+    cursor: pointer;
+  }
+
+  .tabs .slider {
+    display: block;
+    bottom: 0;
+    top: -3px;
+    height: 4px;
+    width: 158px;
+    margin-left: 26px;
+    background: #FF9864;
+    transition: all 0.5s;
+  }
+
+
+  .overlay_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #container #interfaces .description {
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #container #interfaces .description .title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #a0a0a0;
+    max-width: 310px;
+    width: 90%;
+    margin:  auto;
+  }
+
+  #container #interfaces .description p {
+    font-size: 18px;
+    color: #A0A0A0;
+    font-weight: 300;
+    width: 88%;
+    max-width: 414px;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  #container #interfaces .description .images {
+    position: relative;
+    margin: auto;
+    margin-top: 54px;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    width: 282px;
+  }
+
+  #container #interfaces .description .images .web .web_image {
+    background-image: url("images/web.svg");
+    height: 158px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+
+  #container #interfaces .description .images .web .web_text {
+    font-size: 16px;
+    margin-top: 26px;
+    width: 282px;
+  }
+
+  #container #interfaces .description .images .web {
+    float: left;
+    width: 282px;
+  }
+
+  #container #interfaces .description .images .mobile .mobile_image {
+    background-image: url("images/phone.svg");
+    height: 185px;
+    width: 200px;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: contain;
+  }
+
+  #container #interfaces .description .images .mobile .mobile_text {
+      margin-top: 26px;
+      font-size: 16px;
+      width: 282px;
+  }
+
+  #container #interfaces .description .images .mobile {
+    float: left;
+    width: 282px;
+    margin-top: 38px;
+  }
+
+  #container #interfaces .description .images .desktop .desktop_image {
+    background-image: url("images/mac.svg");
+    height: 158px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+
+  #container #interfaces .description .images .desktop .desktop_text {
+    margin-top: 26px;
+    font-size: 16px;
+  }
+
+  #container #interfaces .description .images .desktop {
+    float: left;
+    width: 282px;
+    margin-top: 38px;
+  }
+
+  #container #interfaces .projects {
+    text-align: center;
+    position: relative;
+    top: 72px;
+    float: left;
+    width: 100%;
+  }
+
+  #container #interfaces .projects .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #A0A0A0;
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+  }
+
+  #container #interfaces .projects p {
+    font-size: 18px;
+    color: #A0A0A0;
+    /* letter-spacing: -0.4px; */
+    font-weight: 300;
+    width: 90%;
+    max-width: 428px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 34px;
+  }
+
+  #container #interfaces .projects .projects_list {
+    margin: auto;
+    width: 100%;
+  }
+
+  #container #interfaces .projects .projects_list ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    /* float: left; */
+    /* width: 1139px; */
+  }
+
+  #container #interfaces .projects .projects_list li {
+    display: block;
+    float: left;
+    margin: auto;
+    list-style-type: none;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  #container #interfaces .projects .projects_list li:nth-child(even) {
+  }
+
+  #container #interfaces .projects .projects_list .image {
+    height: 390px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    border: 1px #d6d6d6 solid;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+  }
+
+  #container #interfaces .projects .projects_list .panel {
+    width: 100%;
+    height: 80px;
+    margin-top: 309px;
+    background-color: white;
+    border-radius: 0px 0px 3px 3px;
+    border-top: 1px #d6d6d6 solid;
+  }
+
+  #container #interfaces .projects .projects_list .panel .title {
+    font-size: 20px;
+    color: #707070;
+    letter-spacing: -0.4px;
+    text-align: left;
+    margin-top: 13px;
+    margin-left: 15px;
+  }
+
+  #container #interfaces .projects .projects_list .panel .description {
+    font-size: 16px;
     color: #A2A2A2;
     letter-spacing: -0.34px;
     text-align: left;

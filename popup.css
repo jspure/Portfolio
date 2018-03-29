@@ -112,7 +112,6 @@
   }
 
   .popup .content .info .title {
-    font-family: "Avenir-Medium";
     font-size: 20px;
     color: #707070;
     letter-spacing: -0.4px;
@@ -120,7 +119,6 @@
 
   .popup .content .info .description {
     margin-top: 10px;
-    font-family: "Avenir-Regular";
     font-size: 16px;
     color: #A2A2A2;
     letter-spacing: -0.34px;
@@ -177,7 +175,7 @@
     .overlay {
       background: rgba(0, 0, 0, 0.7);
     }
-    
+
     .popup {
       margin-top: 30px;
       margin-bottom: 30px;
@@ -218,7 +216,6 @@
       margin-top: 14px;
       margin-left: 15px;
       position: absolute;
-      font-family: "Avenir-Medium";
       font-size: 22px;
       color: #707070;
       letter-spacing: -0.44px;
@@ -277,7 +274,6 @@
     }
 
     .popup .content .info .title {
-      font-family: "Avenir-Medium";
       font-size: 20px;
       color: #707070;
       letter-spacing: -0.4px;
@@ -285,7 +281,6 @@
 
     .popup .content .info .description {
       margin-top: 10px;
-      font-family: "Avenir-Regular";
       font-size: 16px;
       color: #A2A2A2;
       letter-spacing: -0.34px;
@@ -341,7 +336,6 @@
   .popup .content .name {
     margin-left: 15px;
     position: absolute;
-    font-family: "Avenir-Medium";
     font-size: 22px;
     color: #707070;
     margin-top: 0;
@@ -387,7 +381,6 @@
   .popup .content .name {
     margin-left: 15px;
     position: absolute;
-    font-family: "Avenir-Medium";
     font-size: 22px;
     color: #707070;
     letter-spacing: -0.44px;
