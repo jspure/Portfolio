@@ -29,6 +29,26 @@ $(".popup .close").click(function() {
     $('body').css('overflow-y', 'scroll');
 })
 
+$(document).ready(function () {
+  setInterval(function () {
+    var $sample = $("body");
+    if ($sample.is(":hover")) {
+      window.innerDocClick = true;
+    } else {
+      window.innerDocClick = false;
+    }
+  });
+
+});
+
+window.onhashchange = function () {
+  if (window.innerDocClick) {
+    //Your own in-page mechanism triggered the hash change
+  } else {
+    $('body').css('overflow-y', 'scroll');
+  }
+};
+
 if($) {
 
     $('#container > *').hide(0);
