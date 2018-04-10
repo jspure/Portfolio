@@ -63,49 +63,53 @@ if($) {
 
     });
 }
-
 $(function() {
-  var page = 0;
-  count = $(".popup .info").length - 1;
-  console.log(count);
+   $(".overlay").each(function(_, overlay) {
 
-  $(".left_arrow").click(function() {
-      console.log("left");
+    var $overlay = $(overlay);
 
-      if(page <= 0) {
-        page = count;
-      } else {
-        page--
-      }
+    var page = 0;
+    count = $overlay.find(".popup .info").length - 1;
+    console.log(count);
 
-      var active = $(".info.active");
+    $(".left_arrow").click(function() {
+        console.log("left");
 
-      height = active.height();
-      console.log(height);
-      $(".content").css("height", height + 55);
+        if(page <= 0) {
+          page = count;
+        } else {
+          page--
+        }
 
-      $(".popup").find(".info").removeClass("active");
-      $(".popup").find(".info[data-info-id=" + page + "]").addClass("active");
-      console.log(page);
-  })
+        var active = $(".info.active");
 
-  $(".right_arrow").click(function() {
-      if(page >= count) {
-        page = 0
-      } else {
-        page++
-      }
+        height = active.height();
+        console.log(height);
+        $(".content").css("height", height + 55);
 
-      var active = $(".info.active");
+        $(".popup").find(".info").removeClass("active");
+        $(".popup").find(".info[data-info-id=" + page + "]").addClass("active");
+        console.log(page);
+    })
 
-      height = active.height();
-      console.log(height);
-      $(".content").css("height", height + 55);
+    $(".right_arrow").click(function() {
+        if(page >= count) {
+          page = 0
+        } else {
+          page++
+        }
 
-      console.log("right");
-      $(".popup").find(".info").removeClass("active");
-      $(".popup").find(".info[data-info-id=" + page + "]").addClass("active");
-      console.log(page);
+        var active = $(".info.active");
+
+        height = active.height();
+        console.log(height);
+        $(".content").css("height", height + 55);
+
+        console.log("right");
+        $(".popup").find(".info").removeClass("active");
+        $(".popup").find(".info[data-info-id=" + page + "]").addClass("active");
+        console.log(page);
+    })
   })
 })
 
