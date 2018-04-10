@@ -1,7 +1,12 @@
 $(".tabs ul li").click(function() {
 
+  console.log($(".tabs ul li").css("width"));
+
+    var width = $(".tabs ul li").css("width");
+    var width_value = width.substring(0, width.length-2);
+    console.log(width_value);
     var tab = $(this).index();
-    var position = 210 * tab;
+    var position = width_value * tab;
 
     if($(this).hasClass('slider')) {
         return;
