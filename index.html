@@ -313,22 +313,19 @@ const click_handler = el => {
   const page_active_num = ~~page_active.dataset.infoId
 
   if(el.className === 'left_arrow') {
-    const next_page = child.querySelector(`div[data-info-id="${page_active_num - 1}"]`)
-    if(!!!next_page) {
-      class_toggle(page_active)
-      class_toggle(next_page)
-    }
+    const next_page = elem_select(child, `div[data-info-id="${page_active_num - 1}"]`)
+    if !!!next_page return
+    class_toggle(page_active, 'active')
+    class_toggle(next_page, 'active')
   }else{
-    const next_page = child.querySelector(`div[data-info-id="${page_active_num + 1}"]`)
-    if(!!!next_page) {
-      class_toggle(page_active)
-      class_toggle(next_page)
-    }
+    const next_page = elem_select(child, `div[data-info-id="${page_active_num - 1}"]`)
+    if !!!next_page return
+    class_toggle(page_active, 'active')
+    class_toggle(next_page, 'active')
   }
 }
-const class_toggle = el => {
-  el.classList.toggle('active')
-}
+const elem_select = (el, strSelector) => el.querySelector(strSelector)
+const class_toggle = (el, strClass) => el.classList.toggle(strClass)
 </script>
   </body>
 </html>
