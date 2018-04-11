@@ -131,6 +131,12 @@ h1 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+
+#container #interfaces {
+  display: flex;
+  flex-direction: column;
+}
+
 #container #interfaces .description {
   margin: auto;
   text-align: center;
