@@ -1,340 +1,332 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="popup.css">
-    <title>Pixel Treat</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-  </head>
-  <body>
-    <div class="background_image"></div>
-    <div class="overlay_header"></div>
-    <h1>Pixel Treat</h1>
-    <div class="links">
-      <a href="mailto:ctyode@gmail.com" class="gmail">Gmail</a>
-      <a href="https://telegram.me/ctyode" class="telegram">Telegram</a>
-      <a href="https://github.com/ctyode" class="github">Github</a>
-    </div>
-    <div class="tabs">
-      <ul>
-          <li class="active menuElement" href="#" data-tab="interfaces">Интерфейсы</li>
-          <li class="menuElement" href="#" data-tab="graphics">Графика</li>
-          <li class="menuElement" href="#" data-tab="illustrations">Иллюстрации</li>
-          <li class="slider"></li>
-      </ul>
-    </div>
-    <div id="container">
-           <div id="interfaces">
-             <section class="description">
-               <div class="title">Привет, меня зовут Соня, и я дизайнер интерфейсов</div>
-               <p>Я занимаюсь дизайном уже четыре с половиной года, три из которых я фрилансила, и полтора года работала над одним очень крупным проектом удаленно. Я делаю адаптивный дизайн, и он хорошо смотрится везде.</p>
-               <section class="images">
-                 <div class="web">
-                   <div class="web_image"></div>
-                   <div class="web_text">Больше всего я работала с вебом, и делаю его не только для десктопов, но и для мобилок и планшетов.</div>
-                 </div>
-                 <div class="mobile">
-                   <div class="mobile_image"></div>
-                   <div class="mobile_text">Я делала дизайн и для Android, и для iOS. А еще я умею адаптировать его для iPad так, чтобы это работало.</div>
-                 </div>
-                 <div class="desktop">
-                   <div class="desktop_image"></div>
-                   <div class="desktop_text">С десктопными интерфейсами я еще не работала, но, думаю, у меня получится не хуже, чем остальное.</div>
-                 </div>
-               </section>
-             </section>
-             <section class="projects">
-               <section class="projects_description">
-                <div class="title">Проекты, которые не стыдно показать</div>
-                <p>Здесь есть только проекты за последние пару лет, потому что за это время у меня успел вырасти скилл, ну и показывать хочется только самое интересное. Для удобства разделены десктопные версии и версии для мобильных устройств.</p>
-              </section>
-              <div class="projects_list">
-                <ul>
-                  <li>
-                    <a class="image" style="background-image: url(images/anirandom_preview.png)" href="#popup_1">
-                      <div class="panel">
-                        <div class="title">Anirandom − веб-версия</div>
-                        <div class="description">Сервис для подбора и сохранения просмотренных аниме</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="image" style="background-image: url(images/vk_test/1024.png)" href="#popup_2">
-                      <div class="panel">
-                        <div class="title">HR-сообщества для VK</div>
-                        <div class="description">Лендинг для презентации новой функциональности</div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <div class="image" style="background-image: url(images/sonya5.png)">
-                      <div class="panel">
-                        <div class="title">Baltzer − веб-версия</div>
-                        <div class="description">Сервис для подбора и сохранения просмотренных аниме</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="image" style="background-image: url(images/sonya5.png)">
-                      <div class="panel">
-                        <div class="title">Baltzer − веб-версия</div>
-                        <div class="description">Сервис для подбора и сохранения просмотренных аниме</div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-             </section>
-           </div>
-           <div id="graphics">Nulla molestie lacus sed velit suscipit lobortis in et eros.</div>
-           <div id="illustrations">Sed finibus feugiat odio, placerat lobortis purus cursus at.</div>
-       </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <title>Document</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+a:visited {
+  color: inherit;
+}
+html {
+  height: 100vh;
+  /* width: 100%; */
+}
+body {
+  padding: 0;
+  margin: 0;
+  /* width: 100wh; */
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+#ROOT {
+  /* background-color: red; */
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+  flex-direction: column;
+}
 
-       <div id="popup_1" class="overlay">
-         <div class="left_arrow" onclick="click_handler(this)"></div>
-         <div class="popup">
-           <a class="close" href="#a"></a>
-           <div class="content">
-             <div class="name">Anirandom - web-версия</div>
-             <div class="line_top"></div>
-             <div class="active info" data-info-id="0">
-               <img src="images/anirandom_web/Start.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый первый концепт. Жмешь на кнопку и получаешь аниме для просмотра. Можно выставлять фильтры по жанру, году и оценке на MyAnimeList. <br><br>Задумывался как учебный проект, чтобы набить руку в дизайне и веб-разработке.</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="1">
-               <img src="images/anirandom_web/Sign_In.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый первый концепт. Жмешь на кнопку и получаешь аниме для просмотра. Можно выставлять фильтры по жанру, году и оценке на MyAnimeList.</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="2">
-               <img src="images/anirandom_web/Sign_Up.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="3">
-               <img src="images/anirandom_web/Start_dropdown.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="4">
-               <img src="images/anirandom_web/Start_dropdown.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="5">
-               <img src="images/anirandom_web/Completed.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="6">
-               <img src="images/anirandom_web/Completed_login.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="7">
-               <img src="images/anirandom_web/Completed_edit_review.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="8">
-               <img src="images/anirandom_web/Completed_unreviewed.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="9">
-               <img src="images/anirandom_web/Plan_to_watch.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="10">
-               <img src="images/anirandom_web/Plan_to_watch_menu.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="11">
-               <img src="images/anirandom_web/Search.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="12">
-               <img src="images/anirandom_web/Search_one_element.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="13">
-               <img src="images/anirandom_web/Search_with_scroll.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="14">
-               <img src="images/anirandom_web/404.png" class="picture">
-               <!-- <div class="preview_icon"></div> -->
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div class="right_arrow" onclick="click_handler(this)"></div>
-       </div>
-
-       <div id="popup_2" class="overlay">
-         <div class="left_arrow" onclick="click_handler(this)"></div>
-         <div class="popup">
-           <a class="close" href="#a"></a>
-           <div class="content">
-             <div class="name">HR-сообщества для VK</div>
-             <div class="line_top"></div>
-             <div class="active info" data-info-id="0">
-               <img src="images/vk_test/1024.png" class="picture">
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый первый концепт. Жмешь на кнопку и получаешь аниме для просмотра. Можно выставлять фильтры по жанру, году и оценке на MyAnimeList. <br><br>Задумывался как учебный проект, чтобы набить руку в дизайне и веб-разработке.</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="1">
-               <img src="images/vk_test/1024_closed.png" class="picture">
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый первый концепт. Жмешь на кнопку и получаешь аниме для просмотра. Можно выставлять фильтры по жанру, году и оценке на MyAnimeList.</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="2">
-               <img src="images/vk_test/1024_popup.png" class="picture">
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="3">
-               <img src="images/vk_test/Applications.png" class="picture">
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="4">
-               <img src="images/vk_test/Market.png" class="picture">
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-             <div class="info" data-info-id="5">
-               <img src="images/vk_test/Photo.png" class="picture">
-               <div class="vertical_line"></div>
-               <div class="text">
-                 <div class="title">Главная страница</div>
-                 <div class="description">Собственно, с нее начался сайт, это был самый</div>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div class="right_arrow" onclick="click_handler(this)"></div>
-       </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="select.js"></script>
-
-<script>
-'use strict'
-
-const click_handler = el => {
-  const event = window.event
-  const page_active = event.target.parentElement.querySelector('.active')
-  const child = event.target.parentElement
-  let page_active_num = ~~page_active.dataset.infoId
-  //
-  const pages = elems_select(child, `div[data-info-id]`).length - 1
-
-  if(el.className === 'left_arrow') {
-    if(page_active_num <= 0) {
-      page_active_num = pagess
-    }else{
-      page_active_num--
+#HEADER {
+  /* background-color: blue; */
+  /* display: flex; */
+  flex: 1;
+  max-height: 320px;
+  background-image: url("images/sonya5.png");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+  background-position: 20% 80%;
+}
+  #head_cont_items {
+    flex: 1;
+    /* display: flex; */
+  }
+    #cont_items {
+      display: flex;
+      flex: 1;
+      flex-flow: row wrap;
+      min-height: 51px;
+      color: white;
+      font-family: 'Lato', sans-serif;
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+      padding: 9px;
     }
-  }else{
-    if(page_active_num >= pages) {
-      page_active_num = 0
-    }else{
-      page_active_num++
+      #case_title {
+        /* background-color: orange; */
+        display: flex;
+        flex: 10;
+        min-height: 51px;
+      }
+        #title {
+          /* background-color: red; */
+          font-size: 42px;
+          /* padding-top: 9px; */
+          padding-left: 13px;
+          margin: 0;
+          white-space: nowrap;
+          cursor: default;
+        }
+      #cont_social_btns {
+        /* background-color: orangered; */
+        display: flex;
+        flex: 1;
+        min-height: 51px;
+      }
+        #case_social_btns {
+          display: flex;
+          flex: 1;
+          flex-direction: row;
+        }
+          .cont_social_items {
+            /* border: 1px solid black; */
+            flex: 1;
+            display: flex;
+            align-items: center;
+            /* justify-content: center;  */ /* Чтобы кнопки-ссылки были в общей базе */
+            justify-content: space-around;
+            max-height: 32px;
+          }
+            .cont_social_items a {
+              /* background-color: red; */
+              font-size: 18px;
+              text-decoration: none;
+              /* display: flex; */
+              /* flex: 1; */
+              font-weight: 600;
+            }
+              .social_item {
+                /* background-color: yellow; */
+                flex: 1;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+              }
+                .social_item_icon {
+                  /* background-color: blue; */
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  min-width: 28px;
+                  min-height: 28px;
+                  /* flex: 1; */
+                  padding: 3px; /* Большие значения могут ввести гор. прокр. */
+                }
+                .social_item_label {
+                  /* background-color: green; */
+                  /* flex: 1; */
+                  padding: 3px;
+                }
+                .icon_gmail {
+                  background-image: url('images/gmail.png');
+                }
+#MENU {
+  /* background-color: blueviolet; */
+  display: flex;
+  flex: 1;
+  max-height: 58px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.17);
+}
+  #case_menu {
+    display: flex;
+    flex: 1;
+    /* background-color: dodgerblue; */
+    justify-content: center;
+  }
+    #menu_cont {
+      display: flex;
+      /* flex: 1; */
+      /* background-color: violet; */
+      flex-basis: 600px;
+      flex-direction: column;
     }
+      #menu_cont_items {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        font-family: 'Lato', sans-serif;
+        /* background-color: blue; */
+      }
+        .menu_item {
+          /* border: 1px solid black; */
+          display: flex;
+          flex: 1 100%;
+          color: rgb(82, 82, 82);
+          cursor: pointer;
+          font-size: 21px;
+          padding: 1px;
+          align-items: center;
+          justify-content: center;
+          transition: font-size 0.5s;
+        }
+      #menu_under_pointer {
+        /* background-color: #FF9864; */
+        flex: 1;
+        max-height: 4px;
+        display: flex;
+      }
+      #menu_under_pointer > div {
+        display: flex;
+        flex: 1;
+        /* background-color: blue; */
+        transition: flex 0.5s;
+      }
+        #case_under_pointer {
+          display: flex;
+          flex: 1 100%;
+          /* background-color: red; */
+          justify-content: center;
+        }
+          #under_pointer {
+            flex: 1;
+            background-color: #FF9864;
+            max-width: 80%;
+            min-height: 100%;
+            transition: max-width 0.5s;
+          }
+#BODY {
+  background-color: brown;
+  flex: 1;
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  #title {
+    padding-left: 0;
+  }
+  #cont_items {
+    flex-direction: column;
+  }
+  #case_title {
+    justify-content: center;
   }
 
-  let next_page = elem_select(child, `div[data-info-id="${page_active_num}"]`)
-  class_toggle(page_active, 'active')
-  class_toggle(next_page, 'active')
+  .menu_item {
+    font-size: 16px;
+  }
+  #under_pointer {
+    max-width: 100%;
+  }
 }
-const elems_select = (el, strSelector) => el.querySelectorAll(strSelector)
-const elem_select = (el, strSelector) => el.querySelector(strSelector)
-const class_toggle = (el, strClass) => el.classList.toggle(strClass)
-</script>
-  </body>
+
+input[type="radio"] {
+  display: none;
+}
+#item1:checked ~ #menu_under_pointer #menu_under_pad_left {
+  background-color: white;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+#item1:checked ~ #menu_under_pointer #menu_under_pad_right {
+  background-color: white;
+  flex-grow: 2;
+}
+
+#item2:checked ~ #menu_under_pointer #menu_under_pad_left,
+#item2:checked ~ #menu_under_pointer #menu_under_pad_right {
+  background-color: white;
+  flex-grow: 1;
+}
+#item3:checked ~ #menu_under_pointer #menu_under_pad_left {
+  background-color: white;
+  flex-grow: 2;
+}
+#item3:checked ~ #menu_under_pointer #menu_under_pad_right {
+  background-color: white;
+  flex-grow: 0;
+}
+</style>
+</head>
+<body>
+  <div id="ROOT">
+    <div id="HEADER">
+      <div id="head_cont_items">
+
+        <div id="cont_items">
+          <div id="case_title">
+            <h1 id="title">Pixel Treat</h1>
+          </div>
+
+          <div id="cont_social_btns">
+            <div id="case_social_btns">
+              <div class="cont_social_items">
+                <a href="">
+                  <span class="social_item">
+                    <span class="social_item_icon icon_gmail"></span>
+                    <span class="social_item_label">Gmail</span>
+                  </span>
+                </a>
+
+                <a href="">
+                  <span class="social_item">
+                    <span class="social_item_icon icon_gmail"></span>
+                    <span class="social_item_label">Telegram</span>
+                  </span>
+                </a>
+
+                <a href="">
+                  <span class="social_item">
+                    <span class="social_item_icon icon_gmail"></span>
+                    <span class="social_item_label">GitHub</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div id="MENU">
+      <div id="case_menu">
+
+        <div id="menu_cont">
+          <div id="menu_cont_items">
+
+            <label class="menu_item" for="item1" type="radio" checked="checked">
+              Интерфейсы
+            </label>
+            <label class="menu_item" for="item2" type="radio" checked="checked">
+                Графика
+            </label>
+            <label class="menu_item" for="item3" type="radio" checked="checked">
+                Люстрации
+            </label>
+
+          </div>
+
+          
+          <input id="item1" type="radio" name="radio" checked="checked"/>
+          <input id="item2" type="radio" name="radio"/>
+          <input id="item3" type="radio" name="radio"/>
+          
+          <div id="menu_under_pointer">
+            <div id="menu_under_pad_left"></div>
+
+            <div id="case_under_pointer">
+              <div id="under_pointer"></div>
+            </div>
+
+            <div id="menu_under_pad_right"></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div id="BODY">
+      BODY
+    </div>
+  </div>
+</body>
 </html>
