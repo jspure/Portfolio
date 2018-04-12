@@ -314,12 +314,12 @@ const click_handler = el => {
 
   if(el.className === 'left_arrow') {
     const next_page = elem_select(child, `div[data-info-id="${page_active_num - 1}"]`)
-    if !!!next_page return
+    if(!!!next_page) return
     class_toggle(page_active, 'active')
     class_toggle(next_page, 'active')
   }else{
-    const next_page = elem_select(child, `div[data-info-id="${page_active_num - 1}"]`)
-    if !!!next_page return
+    const next_page = elem_select(child, `div[data-info-id="${page_active_num + 1}"]`)
+    if(!!!next_page) return
     class_toggle(page_active, 'active')
     class_toggle(next_page, 'active')
   }
