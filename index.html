@@ -310,20 +310,29 @@ const click_handler = el => {
   const event = window.event
   const page_active = event.target.parentElement.querySelector('.active')
   const child = event.target.parentElement
-  const page_active_num = ~~page_active.dataset.infoId
+  let page_active_num = ~~page_active.dataset.infoId
+  //
+  const pages = elems_select(child, `div[data-info-id]`).length - 1
 
   if(el.className === 'left_arrow') {
-    const next_page = elem_select(child, `div[data-info-id="${page_active_num - 1}"]`)
-    if(!!!next_page) return
-    class_toggle(page_active, 'active')
-    class_toggle(next_page, 'active')
+    if(page_active_num <= 0) {
+      page_active_num = pagess
+    }else{
+      page_active_num--
+    }
   }else{
-    const next_page = elem_select(child, `div[data-info-id="${page_active_num + 1}"]`)
-    if(!!!next_page) return
-    class_toggle(page_active, 'active')
-    class_toggle(next_page, 'active')
+    if(page_active_num >= pages) {
+      page_active_num = 0
+    }else{
+      page_active_num++
+    }
   }
+
+  let next_page = elem_select(child, `div[data-info-id="${page_active_num}"]`)
+  class_toggle(page_active, 'active')
+  class_toggle(next_page, 'active')
 }
+const elems_select = (el, strSelector) => el.querySelectorAll(strSelector)
 const elem_select = (el, strSelector) => el.querySelector(strSelector)
 const class_toggle = (el, strClass) => el.classList.toggle(strClass)
 </script>
