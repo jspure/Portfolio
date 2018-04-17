@@ -45,7 +45,7 @@ body {
   /* display: flex; */
   flex: 1;
   max-height: 320px;
-  min-height: 300px;
+  min-height: 320px;
   background-image: url("images/sonya5.png");
   background-repeat: no-repeat;
   /* background-position: center; */
@@ -377,53 +377,80 @@ body {
               padding-top: 25px;
               padding-bottom: 25px;
             }
-              .cont_proj_item {
-                border: 1px #d6d6d6 solid;
-                max-width: 470px;
-                min-height: 320px;
-                border-radius: 4px;
+              .case_project {
                 display: flex;
-                flex-direction: column;
-                cursor: pointer;
+                /* background-color: red; */
+                padding: 20px;
               }
-                .item_image_preview {
-                  background-image: url('images/anirandom_preview.png');
-                  flex: 1;
-                  background-repeat: no-repeat;
-                  /* background-size: contain; */
-                  /* background-position: 10%; */
-                  background-position: top left;
-                }
-                .item_panel {
+                .cont_proj_item {
+                  border: 1px #d6d6d6 solid;
+                  max-width: 470px;
+                  min-width: 460px;
+                  min-height: 320px;
+                  border-radius: 4px;
                   display: flex;
-                  flex: 1;
-                  /* background-color: orange; */
-                  max-height: 80px;
                   flex-direction: column;
-                  justify-content: center;
-                  border-top: 1px #d6d6d6 solid;
-                  padding: 2px;
+                  cursor: pointer;
+                  /* position: relative; */
                 }
-                  .panel_cont_text {
-                    /* background-color: red; */
+                  .item_image_preview {
+                    /* background-image: url('images/anirandom_preview.png'); */
                     flex: 1;
+                    background-repeat: no-repeat;
+                    /* background-size: contain; */
+                    /* background-position: 10%; */
+                    background-position: top left;
+                    position: relative;
+                  }
+                  .item_image_preview::before {
+                    opacity: 0;
+                    content: '';
+                    position: absolute;
+                    background-image: url('/assets/overlay.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    /* background-color: red; */
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    transition: opacity ease-in-out .25s;
+                  }
+                  .item_image_preview:hover::before {
+                    opacity: 1;
+                  }
+                  .item_panel {
                     display: flex;
+                    flex: 1;
+                    /* background-color: orange; */
+                    max-height: 80px;
                     flex-direction: column;
                     justify-content: center;
-                    padding: 9px;
+                    border-top: 1px #d6d6d6 solid;
+                    padding: 2px;
                   }
-                    .item_panel_title {
-                      color: #707070;
-                      font-size: 21px;
-                      text-align: left;
-                      padding: 2px;
-                      line-height: 1em;
+                    .panel_cont_text {
+                      /* background-color: red; */
+                      flex: 1;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      padding: 9px;
                     }
-                    .item_panel_desc {
-                      font-size: 15px;
-                      padding: 2px;
-                      /* line-height: 1.6em; */
-                    }
+                      .item_panel_title {
+                        color: #707070;
+                        font-size: 21px;
+                        text-align: left;
+                        padding: 2px;
+                        line-height: 1em;
+                      }
+                      .item_panel_desc {
+                        font-size: 15px;
+                        padding: 2px;
+                        /* line-height: 1.6em; */
+                      }
 
 
 </style>
@@ -552,23 +579,28 @@ body {
             </div>
 
             <div class="screen_cont_images">
-              <div id="list_projects" class="cont_images_proj">
-                <div class="cont_proj_item">
-                  <div class="item_image_preview"></div>
-                  <div class="item_panel">
 
-                    <div class="panel_cont_text">
-                      <span class="item_panel_title">
-                        Anirandom − веб-версия
-                      </span>
-                      <span class="item_panel_desc">
-                        Сервис для подбора и сохранения просмотренных аниме
-                      </span>
+              <list-proj id="list_projects" class="cont_images_proj">
+
+                <div v-on:click="" v-for="text in listProj" class="case_project">
+                  <div class="cont_proj_item">
+                    <div :style="{ backgroundImage: `url('${text.preview}')` }" class="item_image_preview"></div>
+                    <!-- <div class="proj_overlay"></div> -->
+                    <div class="item_panel">
+                      <div class="panel_cont_text">
+                        <span class="item_panel_title">
+                          {{text.title}}
+                        </span>
+                        <span class="item_panel_desc">
+                          {{text.desc}}
+                        </span>
+                      </div>
                     </div>
-
                   </div>
                 </div>
-              </div>
+
+              </list-proj>
+
             </div>
             
           </div>
@@ -581,20 +613,84 @@ body {
   </div>
 
 <script>
-Vue.component('proj-item', {
-  props: ['todo'],
-  template: '<li>{{ todo.text }}</li>'
-})
-var app7 = new Vue({
-  el: '#list_projects',
+
+new Vue({
+  el: "#list_projects",
   data: {
-    groceryList: [
-      { id: 0, text: 'Vegetables' },
-      { id: 1, text: 'Cheese' },
-      { id: 2, text: 'Whatever else humans are supposed to eat' }
+    styles: {
+    }
+  },
+  computed: {
+    styles: function() {
+      console.log(this.preview)
+      return {
+        // 'background-image': 'url(' + this.preview + ')'
+      }
+    }
+  },
+  data: {
+    listProj: [
+      {
+        preview: 'images/anirandom_preview.png',
+        title: 'Anirandom − веб-версия',
+        desc: 'Сервис для подбора и сохранения просмотренных аниме'
+      },
+      {
+        preview: 'images/vk_test/1024.png',
+        title: 'HR-сообщества для VK',
+        desc: 'Лендинг для презентации новой функциональности'
+      },
+      {
+        preview: 'images/sonya5.png',
+        title: 'Baltzer − веб-версия',
+        desc: 'Сервис для подбора и сохранения просмотренных аниме'
+      }
     ]
   }
-})
+});
+
+// Vue.component('my-checkbox', {
+//   data() {
+//     return {
+//       checked: false,
+//       title: 'Check me'
+//     }
+//   },
+//   methods: {
+//     check() {
+//       this.checked = !this.checked;
+//     }
+//   }
+// });
+// Vue.component('my-checkbox', {
+//   methods: {
+//     check() {
+//       this.checked = !this.checked;
+//     },
+//     data: {
+//       listProj: [
+//         {
+//           id: 0,
+//           title: 'Anirandom − веб-версия'
+//         }
+//       ]
+//     }
+//   }
+// });
+// Vue.component('proj-item', {
+//   props: ['content'],
+//   template: '<div>{{ content.text }}</div>'
+// })
+// var app7 = new Vue({
+//   el: '#list_projects',
+//   data: {
+//     groceryList: [
+//       { id: 0, text: 'Vegetables' },
+//       { id: 1, text: 'Cheese' },
+//       { id: 2, text: 'Whatever else humans are supposed to eat' }
+//     ]
+//   }
+// })
 </script>
 </body>
 </html>
