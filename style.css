@@ -1,1375 +1,448 @@
-@font-face {
-  src: url("fonts/AvenirNext-Medium.woff2") format('woff2');
-  font-family: Avenir;
-  font-weight: 500;
+a:link, a:visited {
+  color: inherit;
+}
+input[type="radio"] {
+  display: none;
 }
 
-@font-face {
-  src: url("fonts/AvenirNext-Regular.woff2") format('woff2');
-  font-family: Avenir;
-  font-weight: 300;
+html {
+  height: 100%;
 }
-
-@font-face {
-  src: url("fonts/AvenirNext-Demibold.woff2") format('woff2');
-  font-family: Avenir;
-  font-weight: 600;
-}
-
-@font-face {
-  src: url("fonts/AvenirNext-Bold.woff2") format('woff2');
-  font-family: Avenir;
-  font-weight: 800;
-}
-
-@font-face {
-  src: url("fonts/Lato-Semibold.ttf");
-  font-family: Lato;
-  font-weight: 600;
-}
-
-@font-face {
-  src: url("fonts/Lato-Medium.ttf");
-  font-family: Lato;
-  font-weight: 400;
-}
-
-* {
-  margin:0;
-  padding:0;
-}
-
 body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: "Lato";
+  padding: 0;
   margin: 0;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.background_image {
-  position: relative;
-  background-image: url("images/sonya5.png");
-  background-size: cover;
-  background-position: 20% 80%;
-  background-repeat: no-repeat;
-}
-
-.links {
-  position: absolute;
-  font-weight: 500;
-  color: white;
-  text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-.links .gmail::before {
-  position: relative;
-  content: url("images/gmail.png");
-}
-
-.links .telegram::before {
-  position: relative;
-  content: url("images/telegram.png");
-}
-
-.links .github::before {
-  position: relative;
-  content: url("images/github.png");
-}
-
-h1 {
-  position: absolute;
-  font-family: "Lato";
-  font-weight: 600;
-  color: white;
-  font-weight: normal;
-  text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
-}
-
-.tabs {
-  width: 100%;
-  background: #FFFFFF;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.17);
-}
-
-.tabs ul {
-  user-select: none;
-  margin: auto;
-  padding: 0;
-  font-size: 0;
-}
-
-.tabs ul li {
-  display: inline-block;
-  text-align: center;
-  color: rgba(61, 61, 61, 0.5);
-  position: relative;
-  cursor: pointer;
-}
-
-.tabs .active {
-  display: inline-block;
-  color: rgb(82, 82, 82);
-  cursor: pointer;
-}
-
-.tabs .slider {
-  display: block;
-  background: #FF9864;
-  transition: all 0.5s;
-}
-
-.overlay_header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-
-#container #interfaces {
+#ROOT {
+  /* background-color: red; */
   display: flex;
+  flex: 1;
+  min-height: 100%;
   flex-direction: column;
 }
 
-#container #interfaces .description {
-  margin: auto;
-  text-align: center;
-}
-
-#container #interfaces .description .title {
-  font-weight: 500;
-  color: #a0a0a0;
-  margin: auto;
-}
-
-#container #interfaces .description p {
-  color: #A0A0A0;
-  font-weight: 300;
-  margin: auto;
-}
-
-#container #interfaces .description .images {
-  position: relative;
-  margin: auto;
-  color: #a0a0a0;
-}
-
-#container #interfaces .description .images {
-  position: relative;
-  margin: auto;
-  color: #a0a0a0;
-}
-
-#container #interfaces .description .images .web .web_image {
-  background-image: url("images/web.svg");
+#HEADER {
+  /* background-color: blue; */
+  /* display: flex; */
+  flex: 1;
+  max-height: 320px;
+  min-height: 320px;
+  background-image: url("images/sonya5.png");
   background-repeat: no-repeat;
-  margin: auto;
-  background-size: contain;
+  /* background-position: center; */
+  background-size: cover;
+  background-position: 20% 80%;
 }
-
-#container #interfaces .description .images .web {
-  float: left;
-}
-
-#container #interfaces .description .images .mobile .mobile_image {
-  background-image: url("images/phone.svg");
-  background-repeat: no-repeat;
-  margin: auto;
-  background-size: contain;
-}
-
-#container #interfaces .description .images .mobile {
-  float: left;
-}
-
-#container #interfaces .description .images .desktop .desktop_image {
-  background-image: url("images/mac.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: auto;
-}
-
-#container #interfaces .description .images .desktop {
-  float: left;
-}
-
-#container #interfaces .projects {
-  text-align: center;
-  position: relative;
-  display:  flex;
-  flex-direction:  column;
-  align-items:  center;
-}
-
-#container #interfaces .projects .title {
-  font-weight: 500;
-  color: #A0A0A0;
-  margin: auto;
-}
-
-#container #interfaces .projects p {
-  color: #A0A0A0;
-  font-weight: 300;
-  margin: auto;
-}
-
-#container #interfaces .projects .projects_list {
-  margin: auto;
-  max-width: 1200px;
-}
-
-#container #interfaces .projects .projects_list ul {
+  #head_cont_items {
+    flex: 1;
+    /* display: flex; */
+  }
+    #cont_items {
+      display: flex;
+      flex: 1;
+      flex-flow: row wrap;
+      min-height: 51px;
+      color: white;
+      font-family: 'Lato', sans-serif;
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+      padding: 9px;
+    }
+      #case_title {
+        /* background-color: orange; */
+        display: flex;
+        flex: 10;
+        min-height: 51px;
+      }
+        #title {
+          /* background-color: red; */
+          font-size: 42px;
+          /* padding-top: 9px; */
+          padding-left: 13px;
+          margin: 0;
+          white-space: nowrap;
+          cursor: default;
+        }
+      #cont_social_btns {
+        /* background-color: orangered; */
+        display: flex;
+        flex: 1;
+        min-height: 51px;
+      }
+        #case_social_btns {
+          display: flex;
+          flex: 1;
+          flex-direction: row;
+        }
+          .cont_social_items {
+            /* border: 1px solid black; */
+            flex: 1;
+            display: flex;
+            align-items: center;
+            /* justify-content: center;  */ /* Чтобы кнопки-ссылки были в общей базе */
+            justify-content: space-around;
+            max-height: 32px;
+          }
+            .cont_social_items a {
+              /* background-color: red; */
+              font-size: 18px;
+              text-decoration: none;
+              /* display: flex; */
+              /* flex: 1; */
+              font-weight: 600;
+            }
+              .social_item {
+                /* background-color: yellow; */
+                flex: 1;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+              }
+                .social_item_icon {
+                  /* background-color: blue; */
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  min-width: 28px;
+                  min-height: 28px;
+                  /* flex: 1; */
+                  padding: 3px; /* Большие значения могут ввести гор. прокр. */
+                }
+                .social_item_label {
+                  /* background-color: green; */
+                  /* flex: 1; */
+                  padding: 3px;
+                }
+                .icon_gmail {
+                  background-image: url('images/gmail.png');
+                }
+#MENU {
+  /* background-color: blueviolet; */
   display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+  flex: 1;
+  max-height: 58px;
+  min-height: 58px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.17);
 }
-
-#container #interfaces .projects .projects_list li {
-  display: block;
-  float: left;
-  list-style-type: none;
-}
-
-#container #interfaces .projects .projects_list .image {
-  background-repeat: no-repeat;
-  border: 1px #d6d6d6 solid;
-  cursor: pointer;
-  display: block;
-}
-
-#container #interfaces .projects .projects_list .panel {
-  background-color: white;
-}
-
-#container #interfaces .projects .projects_list .panel .title {
-  color: #707070;
-  text-align: left;
-  font-weight: 600;
-}
-
-#container #interfaces .projects .projects_list .panel .description {
-  color: #A2A2A2;
-  text-align: left;
-}
-
-.overlay {
-  overflow-y: scroll;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 200ms ease-out;
-  visibility: hidden;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  position: fixed;
-}
-
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media (min-width: 1024px) {
-
-  .background_image {
-    height: 320px;
-    width: 100%;
-  }
-
-  .links {
-    right: 15px;
-    top: 9px;
-    font-size: 18px;
-  }
-
-  .links .gmail {
-    margin-right: 23px;
-  }
-
-  .links .gmail::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .telegram {
-    margin-right: 23px;
-  }
-
-  .links .telegram::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .github::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  h1 {
-    font-size: 42px;
-    left: 22px;
-    top: 18px;
-    margin: 0;
-  }
-
-  .tabs {
-    height: 58px;
-  }
-
-  .tabs ul {
-    width: 630px;
-  }
-
-  .tabs ul li {
-    width: 210px;
-    height: 58px;
-    font-size: 22px;
-    line-height: 60px;
-  }
-
-  .tabs .slider {
-    bottom: 0;
-    top: -3px;
-    height: 4px;
-    width: 158px;
-    margin-left: 26px;
-  }
-
-  .overlay_header {
-    height: 320px;
-  }
-
-  #container #interfaces {
+  #case_menu {
     display: flex;
+    flex: 1;
+    /* background-color: dodgerblue; */
+    justify-content: center;
+  }
+    #menu_cont {
+      display: flex;
+      /* flex: 1; */
+      /* background-color: violet; */
+      flex-basis: 600px;
+      flex-direction: column;
+    }
+      #menu_cont_items {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        font-family: 'Lato', sans-serif;
+        /* background-color: blue; */
+      }
+        .menu_item {
+          /* border: 1px solid black; */
+          display: flex;
+          flex: 1 100%;
+          color: rgb(82, 82, 82);
+          cursor: pointer;
+          font-size: 21px;
+          padding: 1px;
+          padding-top: 4px;
+          align-items: center;
+          justify-content: center;
+          transition: font-size 0.5s;
+        }
+      #menu_under_pointer {
+        /* background-color: #FF9864; */
+        flex: 1;
+        max-height: 4px;
+        display: flex;
+      }
+      #menu_under_pointer > div {
+        display: flex;
+        flex: 1;
+        /* background-color: blue; */
+        transition: flex 0.5s;
+      }
+        #case_under_pointer {
+          display: flex;
+          flex: 1 100%;
+          /* background-color: red; */
+          justify-content: center;
+        }
+          #under_pointer {
+            flex: 1;
+            background-color: #FF9864;
+            max-width: 80%;
+            min-height: 100%;
+            transition: max-width 0.5s;
+          }
+
+/* Menu logic */
+#item1:checked ~ #MENU #menu_under_pointer #menu_under_pad_left {
+  /* background-color: red; */
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+#item1:checked ~ #MENU #menu_under_pointer #menu_under_pad_right {
+  /* background-color: red; */
+  flex-grow: 2;
+}
+
+#item2:checked ~#MENU #menu_under_pointer #menu_under_pad_left,
+#item2:checked ~#MENU #menu_under_pointer #menu_under_pad_right {
+  /* background-color: white; */
+  flex-grow: 1;
+}
+
+#item3:checked ~ #MENU #menu_under_pointer #menu_under_pad_left {
+  /* background-color: white; */
+  flex-grow: 2;
+}
+#item3:checked ~ #MENU #menu_under_pointer #menu_under_pad_right {
+  /* background-color: white; */
+  flex-grow: 0;
+}
+
+/* Screens logic */
+#item1:checked ~ #BODY #cont_screens .interfaces {
+  /* background-color: red; */
+  display: flex;
+}
+#item2:checked ~ #BODY #cont_screens .drawings {
+  background-color: rebeccapurple;
+  display: flex;
+}
+#item3:checked ~ #BODY #cont_screens .illustrations {
+  background-color: royalblue;
+  display: flex;
+}
+
+
+
+#BODY {
+  /* background-color: brown; */
+  flex: 1;
+  display: flex;
+}
+  #cont_screens {
+    /* background-color: green; */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 25px;
+  }
+    .case_content {
+      /* background-color: lightsalmon; */
+      display: flex;
+      flex: 1;
+      display: none;
+    }
+      .cont_screen {
+        /* background-color: tomato; */
+        display: flex;
+        flex: 1;
+        /* align-items: center; */
+        /* justify-content: center; */
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        color: #a0a0a0;
+        font-family: 'Lato', sans-serif;
+      }
+        .screen_cont_desc {
+          /* background-color: blue; */
+          display: flex;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+          .desc_title {
+            padding: 25px;
+            font-size: 28px;
+            /* font-weight: 500; */
+          }
+          .desc_txt {
+            /* background-color: red; */
+            font-size: 18px;
+            /* line-height: 26px; */
+            font-weight: 300;
+            max-width: 700px;
+          }
+
+        .screen_cont_images {
+          /* background-color: green; */
+          display: flex;
+          justify-content: center;
+          padding-top: 25px;
+        }
+          .cont_images {
+            display: flex;
+            flex: 1;
+            max-width: 1053px;
+            /* align-items: center; */
+            /* align-content: center; */
+            justify-content: space-around;
+            /* justify-content: center; */
+            flex-flow: row wrap;
+          }
+            .cont_image {
+              /* background-color: darkorchid; */
+              max-width: 277px;
+              min-width: 220px;
+              /* border: 1px solid black; */
+              /* display: flex; */
+              flex: 1;
+              flex-direction: column;
+              padding: 25px;
+            }
+              .image_img {
+                /* background-color: white; */
+                /* flex: 1; */
+                min-width: 180px;
+                min-height: 141px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+              }
+              .image_txt {
+                /* background-color: aqua; */
+                /* padding: 5px; */
+                padding-top: 26px;
+                max-width: 277px;
+                line-height: 24px;
+                text-align: center;
+              }
+              .web {
+                /* background-color: yellow; */
+                background-image: url('images/web.svg')
+              }
+              .mobile {
+                background-image: url('images/phone.svg')
+              }
+              .pc {
+                background-image: url('images/mac.svg')
+              }
+
+            .cont_images_proj {
+              display: flex;
+              flex: 1;
+              /* background-color: red; */
+              max-width: 1200px;
+              justify-content: center;
+              flex-flow: row wrap;
+              padding-top: 25px;
+              padding-bottom: 25px;
+            }
+              .case_project {
+                display: flex;
+                /* background-color: red; */
+                padding: 20px;
+              }
+                .cont_proj_item {
+                  border: 1px #d6d6d6 solid;
+                  max-width: 470px;
+                  min-width: 460px;
+                  min-height: 320px;
+                  border-radius: 4px;
+                  display: flex;
+                  flex-direction: column;
+                  cursor: pointer;
+                  /* position: relative; */
+                }
+                  .item_image_preview {
+                    /* background-image: url('images/anirandom_preview.png'); */
+                    flex: 1;
+                    background-repeat: no-repeat;
+                    /* background-size: contain; */
+                    /* background-position: 10%; */
+                    background-position: top left;
+                    position: relative;
+                  }
+                  .item_image_preview::before {
+                    opacity: 0;
+                    content: '';
+                    position: absolute;
+                    background-image: url('/assets/overlay.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    /* background-color: red; */
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    transition: opacity ease-in-out .25s;
+                  }
+                  .item_image_preview:hover::before {
+                    opacity: 1;
+                  }
+                  .item_panel {
+                    display: flex;
+                    flex: 1;
+                    /* background-color: orange; */
+                    max-height: 80px;
+                    flex-direction: column;
+                    justify-content: center;
+                    border-top: 1px #d6d6d6 solid;
+                    padding: 2px;
+                  }
+                    .panel_cont_text {
+                      /* background-color: red; */
+                      flex: 1;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      padding: 9px;
+                    }
+                      .item_panel_title {
+                        color: #707070;
+                        font-size: 21px;
+                        text-align: left;
+                        padding: 2px;
+                        line-height: 1em;
+                      }
+                      .item_panel_desc {
+                        font-size: 15px;
+                        padding: 2px;
+                        /* line-height: 1.6em; */
+                      }
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  #title {
+    padding-left: 0;
+  }
+  #cont_items {
     flex-direction: column;
   }
-
-  #container #interfaces .description {
-    margin-top: 50px;
-    width: 100%;
+  #case_title {
+    justify-content: center;
+  }
+  #cont_screens {
+    padding: 6px;
   }
 
-  #container #interfaces .description .title {
-    font-size: 30px;
-    width: 765px;
-  }
-
-  #container #interfaces .description p {
-    font-size: 19px;
-    width: 708px;
-    margin-top: 10px;
-    line-height: 27px;
-  }
-
-  #container #interfaces .description .images {
-    margin-top: 54px;
-    width: 953px;
-    margin-bottom: 20px;
-    line-height: 24px;
-  }
-
-  #container #interfaces .description .images .web .web_image {
-    height: 141px;
-    width: 180px;
-  }
-
-  #container #interfaces .description .images .web .web_text {
-    margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .web {
-    width: 277px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_image {
-    height: 152px;
-    width: 165px;
-    margin-top: -10px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_text {
-      margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .mobile {
-    width: 291px;
-    margin-left: 55px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_image {
-    height: 143px;
-    width: 180px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_text {
-    margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .desktop {
-    width: 275px;
-    margin-left: 55px;
-  }
-
-  #container #interfaces .projects {
-    top: 55px;
-  }
-
-  #container #interfaces .projects .title {
-    font-size: 30px;
-    width: 556px;
-  }
-
-  #container #interfaces .projects p {
-    font-size: 19px;
-    width: 665px;
-    margin-top: 10px;
-    line-height: 27px;
-    margin-bottom: 34px;
-  }
-
-  #container #interfaces .projects .projects_list {
-    /* width: 1024px; */
-  }
-
-  #container #interfaces .projects .projects_list ul {
-    /* width: 980px; */
-  }
-
-  #container #interfaces .projects .projects_list li {
-    padding-bottom: 20px;
-  }
-
-  #container #interfaces .projects .projects_list li:nth-child(even) {
-    padding-left: 20px;
-  }
-
-  #container #interfaces .projects .projects_list .image {
-    height: 320px;
-    width: 470px;
-    background-position: 10%;
-    border: 1px #d6d6d6 solid;
-    border-radius: 4px;
-  }
-
-  #container #interfaces .projects .projects_list .panel {
-    width: 470px;
-    height: 80px;
-    margin-top: 239px;
-    border-radius: 0px 0px 3px 3px;
-    border-top: 1px #d6d6d6 solid;
-  }
-
-  #container #interfaces .projects .projects_list .panel .title {
-    font-size: 21px;
-    margin-top: 13px;
-    margin-left: 15px;
-  }
-
-  #container #interfaces .projects .projects_list .panel .description {
-    font-size: 15px;
-    width: 520px;
-    margin-top: 4px;
-    margin-left: 15px;
-  }
-
-}
-
-@media (min-width: 1366px) {
-
-  .background_image {
-    height: 320px;
-    width: 100%;
-    background-position: 20% 80%;
-  }
-
-  .links {
-    right: 15px;
-    top: 9px;
-    font-size: 18px;
-  }
-
-  .links .gmail {
-    margin-right: 23px;
-  }
-
-  .links .gmail::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .telegram {
-    margin-right: 23px;
-  }
-
-  .links .telegram::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .github::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  h1 {
-    font-size: 42px;
-    left: 22px;
-    top: 18px;
-  }
-
-  .tabs {
-    height: 58px;
-    width: 100%;
-  }
-
-  .tabs ul {
-    width: 630px;
-  }
-
-  .tabs ul li {
-    width: 210px;
-    height: 58px;
-    font-size: 21px;
-    line-height: 60px;
-  }
-
-  .tabs .slider {
-    bottom: 0;
-    top: -3px;
-    height: 4px;
-    width: 158px;
-    margin-left: 26px;
-  }
-
-
-  .overlay_header {
-    width: 100%;
-    height: 320px;
-  }
-
-  #container #interfaces .description {
-    margin-top: 50px;
-    width: 100%;
-  }
-
-  #container #interfaces .description .title {
-    font-size: 28px;
-    width: 765px;
-  }
-
-  #container #interfaces .description p {
-    font-size: 18px;
-    width: 707px;
-    line-height: 26px;
-    margin-top: 10px;
-  }
-
-  #container #interfaces .description .images {
-    margin-top: 54px;
-    line-height: 23px;
-    margin-bottom: 20px;
-    width: 1093px;
-  }
-
-  #container #interfaces .description .images .web .web_image {
-    height: 141px;
-    width: 179px;
-  }
-
-  #container #interfaces .description .images .web .web_text {
-    margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .web {
-    width: 277px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_image {
-    height: 152px;
-    width: 165px;
-    margin-top: -10px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_text {
-      margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .mobile {
-    width: 291px;
-    margin-left: 125px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_image {
-    height: 143px;
-    width: 180px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_text {
-    margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .desktop {
-    width: 275px;
-    margin-left: 125px;
-  }
-
-  #container #interfaces .projects {
-    top: 55px;
-  }
-
-  #container #interfaces .projects .title {
-    font-size: 29px;
-    width: 556px;
-  }
-
-  #container #interfaces .projects p {
-    font-size: 18px;
-    width: 647px;
-    line-height: 26px;
-    margin-top: 10px;
-    margin-bottom: 34px;
-  }
-
-  #container #interfaces .projects .projects_list {
-    /* width: 1366px; */
-  }
-
-  #container #interfaces .projects .projects_list ul {
-    /* width: 1139px; */
-  }
-
-  #container #interfaces .projects .projects_list li {
-    padding-bottom: 35px;
-  }
-
-  #container #interfaces .projects .projects_list li:nth-child(even) {
-    padding-left: 35px;
-  }
-
-  #container #interfaces .projects .projects_list .image {
-    height: 320px;
-    width: 550px;
-    background-position: 10%;
-    border: 1px #d6d6d6 solid;
-    border-radius: 4px;
-  }
-
-  #container #interfaces .projects .projects_list .panel {
-    width: 550px;
-    height: 80px;
-    margin-top: 239px;
-    border-radius: 0px 0px 3px 3px;
-    border-top: 1px #d6d6d6 solid;
-  }
-
-  #container #interfaces .projects .projects_list .panel .title {
-    font-size: 19px;
-    margin-top: 15px;
-    margin-left: 17px;
-  }
-
-  #container #interfaces .projects .projects_list .panel .description {
+  .menu_item {
     font-size: 16px;
-    width: 520px;
-    margin-top: 6px;
-    margin-left: 17px;
+  }
+  #under_pointer {
+    max-width: 100%;
   }
 
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-
-  .background_image {
-    height: 320px;
-    width: 100%;
-    background-position: 20% 80%;
+  .cont_proj_item {
+    min-width: 0;
   }
 
-  .links {
-    right: 15px;
-    top: 9px;
-    font-size: 18px;
-  }
-
-  .links .gmail {
-    margin-right: 23px;
-  }
-
-  .links .gmail::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .telegram {
-    margin-right: 23px;
-  }
-
-  .links .telegram::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .github::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  h1 {
-    font-size: 42px;
-    left: 22px;
-    top: 18px;
-    margin: 0;
-  }
-
-  .tabs {
-    height: 58px;
-    width: 100%;
-  }
-
-  .tabs ul {
-    width: 630px;
-  }
-
-  .tabs ul li {
-    width: 210px;
-    height: 58px;
-    font-size: 22px;
-    line-height: 60px;
-  }
-
-  .tabs .slider {
-    bottom: 0;
-    top: -3px;
-    height: 4px;
-    width: 158px;
-    margin-left: 26px;
-  }
-
-  .overlay_header {
-    width: 100%;
-    height: 320px;
-  }
-
-  #container #interfaces .description {
-    margin-top: 50px;
-    width: 100%;
-  }
-
-  #container #interfaces .description .title {
-    font-size: 22px;
-    width: 571px;
-  }
-
-  #container #interfaces .description p {
-    font-size: 17px;
-    width: 637px;
-    margin-top: 10px;
-    line-height: 25px;
-  }
-
-  #container #interfaces .description .images {
-    margin-top: 54px;
-    margin-bottom: 20px;
-    width: 752px;
-    line-height: 23px;
-  }
-
-  #container #interfaces .description .images .web .web_image {
-    height: 120px;
-    width: 152px;
-  }
-
-  #container #interfaces .description .images .web .web_text {
-    font-size: 14px;
-    margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .web {
-    width: 236px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_image {
-    height: 131px;
-    width: 141px;
-    margin-top: -10px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_text {
-      margin-top: 26px;
-      font-size: 14px;
-  }
-
-  #container #interfaces .description .images .mobile {
-    width: 244px;
-    margin-left: 20px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_image {
-    height: 121px;
-    width: 153px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_text {
-    margin-top: 26px;
-    font-size: 14px;
-  }
-
-  #container #interfaces .description .images .desktop {
-    width: 232px;
-    margin-left: 20px;
-  }
-
-  #container #interfaces .projects {
-    top: 72px;
-  }
-
-  #container #interfaces .projects .title {
-    font-size: 22px;
-    width: 556px;
-  }
-
-  #container #interfaces .projects p {
-    font-size: 17px;
-    width: 637px;
-    line-height: 25px;
-    margin-top: 10px;
-    margin-bottom: 34px;
-  }
-
-  #container #interfaces .projects .projects_list {
-    width: 100%;
-  }
-
-  #container #interfaces .projects .projects_list li {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 35px;
-  }
-
-  #container #interfaces .projects .projects_list .image {
-    height: 360px;
-    width: 100%;
-    background-position: 10%;
-    border: 1px #d6d6d6 solid;
-    border-radius: 4px;
-    margin: auto;
-  }
-
-  #container #interfaces .projects .projects_list .panel {
-    width: 100%;
-    height: 80px;
-    margin-top: 279px;
-    border-radius: 0px 0px 3px 3px;
-    border-top: 1px #d6d6d6 solid;
-  }
-
-  #container #interfaces .projects .projects_list .panel .title {
-    font-size: 20px;
-    margin-top: 14px;
-    margin-left: 15px;
-    font-weight: 600;
-  }
-
-  #container #interfaces .projects .projects_list .panel .description {
-    font-size: 16px;
-    width: 520px;
-    margin-top: 7px;
-    margin-left: 15px;
-  }
-
-}
-
-@media (min-width: 600px) and (max-width: 767px) {
-
-  .background_image {
-    height: 320px;
-    width: 100%;
-    background-position: 20% 80%;
-  }
-
-  .links {
-    right: 15px;
-    top: 9px;
-    font-size: 18px;
-  }
-
-  .links .gmail {
-    margin-right: 23px;
-  }
-
-  .links .gmail::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .telegram {
-    margin-right: 23px;
-  }
-
-  .links .telegram::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .github::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  h1 {
-    font-size: 42px;
-    left: 22px;
-    top: 18px;
-    margin: 0;
-    text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
-  }
-
-  .tabs {
-    height: 58px;
-    width: 100%;
-  }
-
-  .tabs ul {
-    width: 630px;
-    font-size: 0;
+  .modal-mask {
     padding: 0;
   }
-
-  .tabs ul li {
-    width: 210px;
-    height: 58px;
-    font-size: 22px;
-    line-height: 60px;
-    color: rgba(61, 61, 61, 0.5);
-  }
-
-  .tabs .slider {
-    bottom: 0;
-    top: -3px;
-    height: 4px;
-    width: 158px;
-    margin-left: 26px;
-  }
-
-
-  .overlay_header {
-    width: 100%;
-    height: 320px;
-  }
-
-  #container #interfaces .description {
-    margin-top: 50px;
-    width: 100%;
-  }
-
-  #container #interfaces .description .title {
-    font-size: 22px;
-    width: 571px;
-  }
-
-  #container #interfaces .description p {
-    font-size: 17px;
-    max-width: 637px;
-    width: 90%;
-    margin: auto;
-    margin-top: 10px;
-    line-height: 25px;
-  }
-
-  #container #interfaces .description .images {
-    margin-top: 54px;
-    margin-bottom: 20px;
-    width: 318px;
-    line-height: 25px;
-  }
-
-  #container #interfaces .description .images .web .web_image {
-    height: 193px;
-    width: 242px;
-  }
-
-  #container #interfaces .description .images .web .web_text {
-    font-size: 18px;
-    width: 318px;
-    margin-top: 26px;
-  }
-
-  #container #interfaces .description .images .web {
-    width: 318px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_image {
-    height: 209px;
-    width: 226px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_text {
-      margin-top: 26px;
-      width: 318px;
-      font-size: 18px;
-  }
-
-  #container #interfaces .description .images .mobile {
-    margin: 0;
-    margin-top: 38px;
-    width: 318px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_image {
-    height: 193px;
-    width: 242px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_text {
-    margin-top: 26px;
-    font-size: 18px;
-  }
-
-  #container #interfaces .description .images .desktop {
-    width: 318px;
-    margin-top: 38px;
-  }
-
-  #container #interfaces .projects {
-    top: 72px;
-    float:  left;
-  }
-
-  #container #interfaces .projects .title {
-    font-size: 22px;
-    width: 556px;
-  }
-
-  #container #interfaces .projects p {
-    font-size: 17px;
-    max-width: 592px;
-    line-height: 25px;
-    width: 90%;
-    margin-top: 10px;
-    margin-bottom: 34px;
-  }
-
-  #container #interfaces .projects .projects_list {
-    width: 100%;
-  }
-
-  #container #interfaces .projects .projects_list ul {
-    padding: 0;
-  }
-
-  #container #interfaces .projects .projects_list li {
-    margin-bottom: 35px;
-    width: 100%;
-  }
-
-  #container #interfaces .projects .projects_list .image {
-    height: 390px;
-    width: 100%;
-    background-position: 10%;
-    border: 1px #d6d6d6 solid;
-    border-radius: 4px;
-  }
-
-  #container #interfaces .projects .projects_list .panel {
-    width: 100%;
-    height: 80px;
-    margin-top: 309px;
-    border-radius: 0px 0px 3px 3px;
-    border-top: 1px #d6d6d6 solid;
-  }
-
-  #container #interfaces .projects .projects_list .panel .title {
-    font-size: 19px;
-    margin-top: 16px;
-    margin-left: 15px;
-  }
-
-  #container #interfaces .projects .projects_list .panel .description {
-    font-size: 16px;
-    width: 520px;
-    margin-top: 6px;
-    margin-left: 15px;
-  }
-
 }
 
-@media (max-width: 599px) {
-
-  .background_image {
-    height: 320px;
-    width: 100%;
-    background-position: 20% 80%;
-  }
-
-  .links {
-    top: 70px;
-    font-size: 18px;
-    position:  absolute;
-    left: 9px;
-    right:  0;
-    margin-left:  auto;
-    margin-right:  auto;
-    width: 301px;
-  }
-
-  .links .gmail {
-    margin-right: 23px;
-  }
-
-  .links .gmail::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .telegram {
-    margin-right: 23px;
-  }
-
-  .links .telegram::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  .links .github::before {
-    width: 24px;
-    height: 24px;
-    right: 9px;
-    top: 5px;
-  }
-
-  h1 {
-    font-size: 42px;
-    top: -14px;
-    to;
-    width: 192px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right:  auto;
-  }
-
-  .tabs {
-    height: 58px;
-    width: 100%;
-  }
-
-  .tabs ul {
-    width: 100%;
-    font-size: 0;
-    padding: 0;
-  }
-
-  .tabs ul li {
-    width: 33%;
-    height: 58px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 60px;
-  }
-
-  .tabs .slider {
-    bottom: 0;
-    top: -3px;
-    height: 4px;
-    width: 33.9%;
-  }
-
-
-  .overlay_header {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 320px;
-  }
-
-  #container #interfaces .description {
-    margin-top: 50px;
-    width: 100%;
-  }
-
-  #container #interfaces .description .title {
-    font-size: 21px;
-    max-width: 310px;
-    width: 90%;
-    line-height: 29px;
-    margin: auto;
-  }
-
-  #container #interfaces .description p {
-    font-size: 15px;
-    width: 88%;
-    max-width: 414px;
-    margin: auto;
-    line-height: 23px;
-    margin-top: 10px;
-  }
-
-  #container #interfaces .description .images {
-    margin-top: 54px;
-    margin-bottom: 20px;
-    width: 282px;
-    line-height: 23px;
-  }
-
-  #container #interfaces .description .images .web .web_image {
-    height: 158px;
-    width: 200px;
-  }
-
-  #container #interfaces .description .images .web .web_text {
-    font-size: 16px;
-    margin-top: 26px;
-    width: 282px;
-  }
-
-  #container #interfaces .description .images .web {
-    width: 282px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_image {
-    height: 185px;
-    width: 200px;
-  }
-
-  #container #interfaces .description .images .mobile .mobile_text {
-      margin-top: 26px;
-      font-size: 16px;
-      width: 282px;
-  }
-
-  #container #interfaces .description .images .mobile {
-    width: 282px;
-    margin-top: 38px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_image {
-    height: 158px;
-    width: 200px;
-  }
-
-  #container #interfaces .description .images .desktop .desktop_text {
-    margin-top: 26px;
-    font-size: 16px;
-  }
-
-  #container #interfaces .description .images .desktop {
-    width: 282px;
-    margin-top: 38px;
-  }
-
-  #container #interfaces .projects {
-    top: 72px;
-    width: 100%;
-  }
-
-  #container #interfaces .projects .title {
-    font-size: 21px;
-    width: 90%;
-    max-width: 420px;
-    line-height: 29px;
-    margin: auto;
-  }
-
-  #container #interfaces .projects p {
-    font-size: 15px;
-    width: 90%;
-    max-width: 428px;
-    margin: auto;
-    line-height: 23px;
-    margin-top: 10px;
-    margin-bottom: 34px;
-  }
-
-  #container #interfaces .projects .projects_list {
-    margin: auto;
-    width: 100%;
-  }
-
-  #container #interfaces .projects .projects_list ul {
-    padding: 0;
-  }
-
-  #container #interfaces .projects .projects_list li {
-    margin-bottom: 35px;
-    width: 100%;
-  }
-
-  #container #interfaces .projects .projects_list .image {
-    height: 344px;
-    width: 100%;
-    background-position: 10%;
-    border: 1px #d6d6d6 solid;
-    border-radius: 4px;
-  }
-
-  #container #interfaces .projects .projects_list .panel {
-    width: 100%;
-    height: 108px;
-    margin-top: 235px;
-    border-top: solid 1px #e4e4e4;
-    border-bottom: solid 1px #e4e4e4;
-  }
-
-  #container #interfaces .projects .projects_list .panel .title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 15px;
-    margin-top: 13px;
-  }
-
-  #container #interfaces .projects .projects_list .panel .description {
-    font-size: 16px;
-    line-height: 24px;
-    max-width: 330px;
-    margin-top: 4px;
-    margin-left: 15px;
-  }
-
-}
