@@ -10,15 +10,20 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div id="app">   
-    <root
+  <div id="app">
+    <!-- <root
       v-show="!showModal"
       @open-modal="openModal"
     ></root>
     <modal-slider
       v-show="showModal"
       @close-modal="closeModal"
-    ></modal-slider>
+    ></modal-slider> -->
+    <component
+      @open-modal="openModal"
+      @close-modal="closeModal"
+      v-bind:is="currentComp"
+    ></component>
   </div>
 
 <script type="text/x-template" id="root-template">

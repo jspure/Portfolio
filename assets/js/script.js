@@ -1,6 +1,6 @@
 'use strict';
 
-Vue.component('modal-slider', {
+const root = Vue.component('modal-slider', {
   template: '#modal-slider-template',
   data() {
     return {
@@ -14,14 +14,13 @@ Vue.component('modal-slider', {
     }
   },
   mounted() {
-    console.log(1)
     document.addEventListener('keydown', e => {
       if(e.keyCode == 27) this.closeModal()
     })
   }
 })
 
-Vue.component('root', {
+const modal = Vue.component('root', {
   template: '#root-template',
   data() {
     return {
@@ -42,23 +41,35 @@ Vue.component('root', {
   }
 })
 
+const screens = [
+  {
+    name: 'root',
+    component: {
+      template: root
+    }
+  }
+]
+
 new Vue({
   el: '#app',
   data: {
-    showModal: false,
+    // showModal: false,
     list: [],
     rootScrollY: 0,
-    modalScrollY: 0
+    modalScrollY: 0,
+    currentComp: 'root'
   },
   methods: {
     openModal(rootScrollY) {
+      this.currentComp = 'modal-slider'
       this.rootScrollY = rootScrollY
-      this.showModal = true
+      // this.showModal = true
       window.scroll(0, this.modalScrollY)
     },
     closeModal(modalScrollY) {
+      this.currentComp = 'root'
       this.modalScrollY = modalScrollY
-      this.showModal = false
+      // this.showModal = false
       // window.scroll(0, this.rootScrollY)
       // Bug with ScrollY. Returns the absolute height of the page.
       setTimeout(() => window.scroll(0, this.rootScrollY), 0)
