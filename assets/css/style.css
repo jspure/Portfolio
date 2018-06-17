@@ -30,7 +30,7 @@ body {
   flex: 1;
   max-height: 320px;
   min-height: 320px;
-  background-image: url("images/sonya5.png");
+  background-image: url("../img/sonya5.png");
   background-repeat: no-repeat;
   /* background-position: center; */
   background-size: cover;
@@ -116,7 +116,7 @@ body {
                   padding: 3px;
                 }
                 .icon_gmail {
-                  background-image: url('images/gmail.png');
+                  background-image: url('../img/gmail.png');
                 }
 #MENU {
   /* background-color: blueviolet; */
@@ -321,13 +321,13 @@ body {
               }
               .web {
                 /* background-color: yellow; */
-                background-image: url('images/web.svg')
+                background-image: url('../img/web.svg')
               }
               .mobile {
-                background-image: url('images/phone.svg')
+                background-image: url('../img/phone.svg')
               }
               .pc {
-                background-image: url('images/mac.svg')
+                background-image: url('../img/mac.svg')
               }
 
             .cont_images_proj {
@@ -357,7 +357,7 @@ body {
                   /* position: relative; */
                 }
                   .item_image_preview {
-                    /* background-image: url('images/anirandom_preview.png'); */
+                    /* background-image: url('assets/img/anirandom_preview.png'); */
                     flex: 1;
                     background-repeat: no-repeat;
                     /* background-size: contain; */
@@ -369,7 +369,7 @@ body {
                     opacity: 0;
                     content: '';
                     position: absolute;
-                    background-image: url('/assets/overlay.png');
+                    background-image: url('../img/overlay.png');
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
@@ -416,7 +416,7 @@ body {
                       }
 
 /* Small screens */
-@media all and (max-width: 500px) {
+@media all and (max-width: 560px) {
   #title {
     padding-left: 0;
   }
@@ -444,5 +444,11 @@ body {
   .modal-mask {
     padding: 0;
   }
+}
+
+#app {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 

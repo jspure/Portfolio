@@ -1,0 +1,56 @@
+[
+  {
+    "preview": "assets/img/anirandom_preview.png",
+    "title": "Anirandom − веб-версия",
+    "desc": "Сервис для подбора и сохранения просмотренных аниме",
+    "data": {
+      "dir": "assets/img/anirandom_web",
+      "imgs": [
+        {
+          "file": "Start.png",
+          "desc": ""
+        },
+        {"file": "Start_scroll.png"},
+        {"file": "Start_Info.png"},
+        {"file": "Start_dropdown.png"},
+        {"file": "Sign_Up.png"},
+        {"file": "Sign_In.png"},
+        {"file": "Search.png"},
+        {"file": "Search_with_scroll.png"},
+        {"file": "Search_one_element.png"},
+        {"file": "Plan_to_watch.png"},
+        {"file": "Plan_to_watch_menu.png"},
+        {"file": "Completed.png"},
+        {"file": "Completed_unreviewed.png"},
+        {"file": "Completed_reviewed_edit_review.png"},
+        {"file": "Completed_login.png"},
+        {"file": "Completed_empty.png"},
+        {"file": "Completed_edit_review.png"},
+        {"file": "404.png"}
+      ]
+    }
+  },
+  {
+    "preview": "assets/img/vk_test/1024.png",
+    "title": "HR-сообщества для VK",
+    "desc": "Лендинг для презентации новой функциональности",
+    "data": {
+      "dir": "assets/img/vk_test",
+      "imgs": [
+        {"file": "Photo.png"},
+        {"file": "Market.png"},
+        {"file": "Applications.png"},
+        {"file": "1024.png"},
+        {"file": "1024_popup.png"},
+        {"file": "1024_closed.png"},
+        {"file": "320.png"},
+        {"file": "320_request.png"}
+      ]
+    }
+  },
+  {
+    "preview": "assets/img/sonya5.png",
+    "title": "Baltzer − веб-версия",
+    "desc": "Сервис для подбора и сохранения просмотренных аниме"
+  }
+]

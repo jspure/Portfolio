@@ -3,7 +3,7 @@
   flex: 1;
   min-height: 100%;
   transition: opacity .3s ease;
-
+  position: absolute;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
